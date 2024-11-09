@@ -1,0 +1,73 @@
+body,
+h1,
+h2,
+div,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+#gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#cellContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(10px, 1fr));
+  gap: 5px;
+  margin-bottom: 20px;
+  background-color: #f0e5d2;
+  font-size: 4vw;
+  font-family: "Permanent Marker", cursive;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+#statusText {
+  font-size: 2.5vw;
+  margin-bottom: 10px;
+}
+
+#time {
+  font-size: 2.5vw;
+  margin-bottom: 20px;
+}
+
+#restartBtn {
+  font-size: 2vw;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#restartBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Additional Styles for Full Screen on Mobile */
+@media (max-height: 800px) {
+  #gameContainer {
+    min-height: 800px;
+  }
+}
